@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my web site</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+
+        <div class="content">
+            <div class="home">
+                <h1>I am Hamza Gecer</h1>
+                <h3>Web developer</h3>
+            </div>
+
+            <div class="aboutus">
+                <p><strong> Hello Friends,</strong><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+                    Porro labore cumque minima reprehenderit vel minus, perferendis eaque esse rerum. Sapiente provident ipsa ab dolores enim animi distinctio illum pariatur doloribus, quos, earum, placeat totam esse modi fugit optio neque tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro explicabo aperiam architecto facere commodi ratione dignissimos ad at animi!</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis quibusdam accusantium beatae, assumenda similique fugit aliquid unde? Labore, consequatur ab iure, doloribus accusantium voluptatum temporibus, at perspiciatis iste nulla adipisci nisi ullam rerum? Veritatis dicta alias cumque minus praesentium quaerat autem inventore molestias, quasi sequi tempore eum laborum explicabo corporis rem eligendi cum fugit voluptatum deserunt vitae odit blanditiis at accusamus exercitationem! Voluptatibus minima ratione quibusdam reprehenderit, saepe dolorem cupiditate alias provident itaque corrupti dicta, ea placeat voluptas. Dolores incidunt numquam asperiores dolorem possimus suscipit quod, reprehenderit rerum ex impedit nam recusandae. Ipsam cumque aut voluptate libero sint a eligendi.</p>
+            </div>
+            <div class="gallery">
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="./img/8.jpeg" alt="">
+                </div>
+
+            </div>
+            <div class="contactus">
+                <div class="contactform">
+                    <form action="index.html" method="post" >
+                        <input type="text" name="" placeholder="First Name" class="inputtext is-success form-control">
+                        <input type="text" name="" placeholder="Last Name" class="inputtext is-error form-control">
+                        <input type="text" name="" placeholder="Your Email" class="inputtext is-warning form-control">
+                        <textarea  cols="4" rows="6"class="inputmessage form-control" placeholder="Your Messages...!!"></textarea>
+                        <input type="button" name="" class="submitbutton btn" value="submit">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./master.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('a').click(function(){
+            // alert("i am  click")
+            var selected = $(this);
+            $('a').removeClass('active');
+            $(selected).addClass('active');
+        });
+
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $home = $('.home'),
+        $aboutus = $('.aboutus')
+        $gallery = $('.gallery'),
+        $contactus = $('.contactus');
+
+        $a.click(function(){
+            $home.fadeIn();
+            $aboutus.fadeOut();
+            $gallery.fadeOut();
+            $contactus.fadeOut();
+        });
+        $b.click(function(){
+            $aboutus.fadeIn();
+            $home.fadeOut();
+            $gallery.fadeOut();
+            $contactus.fadeOut();
+        });
+        $c.click(function(){
+            $gallery.fadeIn();
+            $home.fadeOut();
+            $aboutus.fadeOut();
+            $contactus.fadeOut();
+        });
+        $d.click(function(){
+            $contactus.fadeIn();
+            $home.fadeOut();
+            $gallery.fadeOut();
+            $aboutus.fadeOut();
+        });
+        
+    });
+    
+    </script>
+</body>
+</html>
